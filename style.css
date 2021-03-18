@@ -1,0 +1,503 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    background-color: #eeeeee;
+}
+
+:root{
+    scroll-behavior: smooth;
+}
+
+.contenedor{
+    width: 90%;
+    max-width: 1200px;
+    overflow: hidden;
+    margin: auto;
+    padding: 50px 0px;
+}
+
+header{
+    height: 100vh;
+    background-image: linear-gradient(to top, rgba(9, 32, 63, 0.5) 0%, rgba(83, 120, 149, 0.5) 100%), url(./img/banner.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.head{
+    height: 100%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #ffffff;
+    text-align: center;
+}
+
+.menu{
+    position: fixed;
+    width: 40px;
+    top: 30px;
+    right: 30px;
+    padding: 5px;
+    cursor: pointer;
+    box-shadow: 1px 1px 5px #242424c0;
+}
+
+.menu-nav{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 30vw;
+    height: 100%;
+    background-image: linear-gradient(to top, #071a33 0%, #446074 100%);
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    transform: translate(110%);
+    transition: transform .2s ease-in-out;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .5);
+}
+
+.spread{
+    transform: translate(0);
+}
+
+.menu-nav a{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 25px;
+}
+
+.titulo{
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.parrafo-header{
+    font-size: 25px;
+    font-weight: 300;
+}
+
+/*  S E R V I C I O S  */
+
+.subtitulo{
+    text-align: center;
+    font-size: 40px;
+    font-weight: 300;
+    margin-bottom: 40px;
+    color: #242424;
+}
+
+.contenedor-servicio{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+
+.lista-servicio,
+.contenedor-servicio img{
+    width: 40%;
+}
+
+.service{
+    margin-bottom: 30px;
+}
+
+.parrafo-service{
+    margin-bottom: 15px;
+}
+
+.n-service{
+    margin-bottom: 7px;
+    color: #242424;
+}
+
+.number{
+    display: inline-block;
+    background-color: #242424;
+    color: #ffffff;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    font-weight: 700;
+    line-height: 30px;
+    margin-right: 5px;
+}
+
+.btn-galeria{
+    text-decoration: none;
+    border: 2px solid #242424;
+    color: #242424;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.fas{
+    margin-left: 5px;
+}
+
+.btn-galeria:hover{
+    background-color: #242424;
+    color: #ffffff;
+}
+
+/*  G A L E R I A  */
+
+.galeria{
+    background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top    center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
+    background-blend-mode: multiply,multiply;
+}
+
+.contenedor-galeria{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.img-galeria{
+    width: 30%;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 20px;
+    box-shadow: 0 0 6px #242424;
+    cursor: pointer;
+}
+
+.img-galeria:hover{
+    box-shadow: 0 0 6px #eeeeee;
+    transform: scale(1.05);
+}
+
+.imagen-light{
+    position: fixed;
+    background: rgba(0, 0, 0, .6);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(100%);
+    transition: transform 2.s ease-in-out;
+}
+
+.show{
+    transform: translate(0);
+}
+
+.agregar-img{
+    width: 50%;
+    border-radius: 10px;
+    object-fit: cover;
+    transform: scale(0);
+    transition: transform .3s .2s;
+}
+
+.close{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 40px;
+    cursor: pointer;
+}
+
+.showImage{
+    transform: scale(1);
+}
+
+/*  N O S O T R O S  */
+
+.tatuadores{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.cont-tatuadores{
+    width: 32%;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.cont-tatuadores img{
+    width: 300px;
+    height: 300px;
+    display: block;
+    margin: auto;
+    border-radius: 50%;
+}
+
+.n-tatuador{
+    display: inline-block;
+    margin-top: 20px;
+    width: 100%;
+    font-weight: 600;
+    margin-bottom: 30px;
+} 
+
+
+.container-overlay:hover{
+    transform: scale(1.05);
+    opacity: 0.8;
+}
+  
+.text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+/*  F O O T E R  */
+
+footer{
+    background-color: #242424;
+    padding-bottom: 0.1px;
+}
+
+.footer-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+.contact-us{
+    width: 40%;
+    color: #ffffff;
+}
+
+.brand{
+    font-weight: 500;
+    font-size: 40px;
+}
+
+.brand+p{
+    font-weight: 500;
+}
+
+.social-media{
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.social-media-icono{
+    display: inline-block;
+    margin-left: 20px;
+    width: 60px;
+    height: 60px;
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+    text-align: center;
+    color: #ffffff;
+}
+
+.social-media-icono i{
+    font-size: 30px;
+    line-height: 60px;
+}
+
+.social-media-icono:hover{
+    background-color: #ffffff;
+    color: #242424;
+}
+
+
+.otros-contactos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5%;
+}
+
+.formulario{
+    width: 40%;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+.ubicacion{
+    width: 40%;
+    padding: 20px;
+}
+
+code{
+    color: #f1f1f1;
+}
+
+.ubicacion p{
+    color: white;
+    font-size: 15px;
+}
+
+.fa-caret-up{
+    color:  #009900;
+}
+
+.fa-caret-down{
+    color: #e60000;
+}
+
+
+input, select, textarea {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #f1f1f1;
+    color: #242424;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 10px;
+    resize: vertical;
+}
+
+.enviarform{
+    background-color: #242424;
+    color: #f1f1f1;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+}
+
+.enviarform:hover{
+    transform: scale(1.05);
+    box-shadow: 1px 1px 3px #4e4e4e;
+    cursor: pointer;
+    
+}
+
+.copyright{
+    background-color: #3b3b3b;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 10px;
+}
+
+/*  M E D I A  Q U E R Y S  */
+
+@media screen and (max-width:800px){
+    .menu-nav{
+        width: 35vh;
+    }
+
+    .contenedor-servicio img{
+        width: 80%;
+        margin-bottom: 40px;
+    }
+
+    .lista-servicio{
+        width: 80%;
+        text-align: center;
+    }
+
+    .agregar-img{
+        width: 80%;
+    }
+
+    .img-galeria{
+        width: 45%;
+    }
+
+    .cont-tatuadores{
+        width: 80%;
+        margin-bottom: 50px;
+    }
+
+    .social-media{
+        width: 80%;
+        justify-content: space-evenly;
+    }
+
+    .social-media-icono{
+        margin-left: 0;
+    }
+
+    .footer-content{
+        justify-content: center;
+    }
+
+    .social-media i{
+        margin-left: 0;
+    }
+
+    .contact-us{
+        text-align: center;
+        width: 80%;
+        margin-bottom: 40px;
+    }
+
+    .ubicacion,
+    .formulario{
+        width: 100%;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width:500px){
+
+    .menu-nav{
+        width: 30vh;
+    }
+
+    .agregar-img{
+        width: 90%;
+    }
+
+    .titulo,
+    .subtitulo{
+        font-size: 30px;
+    }
+
+    .img-galeria{
+        width: 95%;
+    }
+
+    .cont-tatuadores img{
+        width: 200px;
+        height: 200px;
+    }
+
+    .social-media{
+        width: 100%;
+    }
+
+    .contact-us{
+        width: 90%;
+    }
+    
+    .formulario{
+        width: 70%;
+        border-radius: 5px;
+        background-color: #f2f2f2;
+        padding: 20px;
+    }
+    .ubicacion{
+        width: 100%;
+        padding: 20px;
+    }
+
+}
+
